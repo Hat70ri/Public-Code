@@ -1,0 +1,16 @@
+import random
+number=(random.randint(1,101))
+#print(number)
+print("Lets play a game! I have chosen a number between 1-100, try to guess it.")
+guesses=1
+guess=int(input("What is your guess? "))
+while guess!= number:
+    if guess > number:
+        guess=int(input("The number is lower, please guess again: "))
+        guesses += 1
+    if guess < number:
+        guess=int(input("The number is higher, please guess again: "))
+        guesses += 1
+    if guess == number:
+        print("You have guessed correctly!! The number was",number)
+        print("In",guesses,"guesses, great job!")
